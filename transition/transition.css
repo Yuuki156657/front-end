@@ -1,0 +1,258 @@
+@charset "UTF-8";
+.container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container > div {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+}
+
+.container button {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid Black;
+  font-weight: 600px;
+  padding: 10px 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: Black;
+}
+
+.container button.btn1:hover {
+  background-color: Black;
+  color: white;
+  -webkit-box-shadow: 5px 5px 10px 0px Black;
+          box-shadow: 5px 5px 10px 0px Black;
+}
+
+.container button.btn2 {
+  background-color: Black;
+  color: white;
+  -webkit-box-shadow: 5px 5px 10px 0 Black;
+          box-shadow: 5px 5px 10px 0 Black;
+}
+
+.container button.btn2:hover {
+  background-color: white;
+  color: Black;
+}
+
+.container button.btn3:hover {
+  background-color: Black;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.container button.btn4:hover {
+  -webkit-box-shadow: 5px 5px 0 0 Black;
+          box-shadow: 5px 5px 0 0 Black;
+  -webkit-transform: translate(-2.5px, -2.5px);
+          transform: translate(-2.5px, -2.5px);
+}
+
+.container button.btn5 {
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 0 0 Black;
+          box-shadow: 5px 5px 0 0 Black;
+  -webkit-transform: translate(-2.5px, -2.5px);
+          transform: translate(-2.5px, -2.5px);
+}
+
+.container button.btn5:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.container button.btn6 {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container button.btn6::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: Black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.container button.btn6:hover {
+  color: white;
+}
+
+.container button.btn6:hover::before {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.container button.btn7 {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  z-index: 1;
+}
+
+.container button.btn7::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: Black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  z-index: -1;
+  opacity: 0;
+}
+
+.container button.btn7:hover {
+  color: white;
+}
+
+.container button.btn7:hover::before {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+.container button .btn8 {
+  position: relative;
+  display: inline-block;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.container button .btn8.cubic span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  border: 1px solid Black;
+  line-height: 48px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container button .btn8.cubic .hovering {
+  background-color: Black;
+  color: white;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: center center -25px;
+          transform-origin: center center -25px;
+}
+
+.container button .btn8.cubic .default {
+  background-color: white;
+  color: Black;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: center center -25px;
+          transform-origin: center center -25px;
+}
+
+.container button .btn8.cubic:hover .hovering {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+.container button .btn8.cubic:hover .default {
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+
+.container .btn8 .btn {
+  position: relative;
+  display: inline-block;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.container .btn8 .btn.cubic {
+  /** スタイルをここに追加。*/
+}
+
+.container .btn8 .btn.cubic span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  border: 1px solid Black;
+  line-height: 48px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container .btn8 .btn.cubic .hovering {
+  background-color: Black;
+  color: white;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: center center -25px;
+          transform-origin: center center -25px;
+}
+
+.container .btn8 .btn.cubic .default {
+  background-color: white;
+  color: Black;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-transform-origin: center center -25px;
+          transform-origin: center center -25px;
+}
+
+.container .btn8 .btn.cubic:hover .hovering {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+.container .btn8 .btn.cubic:hover .default {
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+/*# sourceMappingURL=transition.css.map */

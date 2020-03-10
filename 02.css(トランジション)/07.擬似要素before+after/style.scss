@@ -1,0 +1,58 @@
+$cWhite: white;
+$cBlack: Black;
+
+#container {
+    text-align: center;
+
+    // .btn {
+    //     background-color: $cWhite;
+    // }
+}
+
+.btn {
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px 10px 40px;
+    margin: 50px 0;
+    font-weight: 600; /* 500がデフォルト */
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &.slide-bg {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before {  /* 要素の先頭に入る空のspanとして扱われる */
+            content: '';   /* 擬似要素を作る際に必ず必要 */
+            // display: inline-block;  * spanを使う時に必要
+            width: 100%;
+            height: 100%;
+            background-color: $cBlack;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(1, 0.22, 0.01, 0.84);
+            z-index: -1;
+        }
+
+        &:hover {
+            color: $cWhite;
+            &::before {     /* NEW */
+                transform: none;
+            }
+        }
+    }
+
+    // &:hover {
+    //     background-color: $cBlack;
+    //     color: $cWhite;
+    // }
+
+    // &-2 {
+    //     background-color: $cWhite;
+    // }
+
+}

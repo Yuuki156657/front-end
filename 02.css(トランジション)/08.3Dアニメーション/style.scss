@@ -1,0 +1,65 @@
+$cWhite: white;
+$cBlack: Black;
+
+#container {
+    text-align: center;
+
+    // .btn {
+    //     background-color: $cWhite;
+    // }
+}
+
+.btn {
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px 10px 40px;
+    margin: 50px 0;
+    font-weight: 600; /* 500がデフォルト */
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &.cover-3d {
+        position: relative;
+        // overflow: hidden;   /* NEW */
+        z-index: 1;
+        transform-style: preserve-3d;   /* NEW 子要素を3Dで表現できる */
+        perspective: 300px;            /* NEW 3Dの奥行き */
+        perspective-origin: 50% 50%;   /* NEW 3Dアニメーションの視点 */
+
+        &::before {
+            content: '';
+            // display: inline-block;  //* spanを使う時に必要
+            width: 100%;
+            height: 100%;
+            background-color: $cBlack;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateX(90deg);   /* NEW X軸に対する回転*/
+            transition: all 0.3s;
+            transform-origin: top center;
+            z-index: -1;
+            opacity: 0;    /* NEW */
+        }
+
+        &:hover {
+            color: $cWhite;
+            &::before {
+                transform: none;
+                opacity: 1;   /* NEW */
+            }
+        }
+    }
+
+
+    // &:hover {
+    //     background-color: $cBlack;
+    //     color: $cWhite;
+    // }
+
+    // &-2 {
+    //     background-color: $cWhite;
+    // }
+
+}

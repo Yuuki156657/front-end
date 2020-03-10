@@ -1,0 +1,9 @@
+.rect {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: orangered;
+  -webkit-transform: translate(100px, 0) scale(2, 2);
+          transform: translate(100px, 0) scale(2, 2);
+}
+/*# sourceMappingURL=style.css.map */

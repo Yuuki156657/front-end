@@ -1,0 +1,44 @@
+a {
+  color: orange;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+a:focus {
+  color: green;
+}
+
+a:active {
+  color: purple;
+}
+
+div p {
+  display: inline;
+}
+
+div p:first-child {
+  color: blue;
+}
+
+div span {
+  color: olive;
+}
+
+div span:nth-child(2) {
+  color: aqua;
+}
+
+div span:nth-of-type(2) {
+  color: red;
+}
+
+div span:last-child {
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */

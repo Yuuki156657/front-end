@@ -1,0 +1,91 @@
+body {
+  text-align: center;
+}
+
+.rect {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: Black;
+  -webkit-animation: sk-bouncedelay 1.4s;
+          animation: sk-bouncedelay 1.4s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+butten {
+  padding: 10px 40px;
+  margin: 20px;
+  border: 1px solid Black;
+  cursor: pointer;
+}
+
+.paused {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    background-color: Black;
+  }
+  20% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    background-color: white;
+  }
+  40% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    background-color: blue;
+  }
+  60% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    background-color: yellow;
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    background-color: red;
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    background-color: Black;
+  }
+  20% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    background-color: white;
+  }
+  40% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    background-color: blue;
+  }
+  60% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    background-color: yellow;
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    background-color: red;
+  }
+}
+/*# sourceMappingURL=style.css.map */

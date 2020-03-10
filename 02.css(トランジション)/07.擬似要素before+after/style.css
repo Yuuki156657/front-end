@@ -1,0 +1,53 @@
+@charset "UTF-8";
+#container {
+  text-align: center;
+}
+
+.btn {
+  background-color: white;
+  color: Black;
+  border: 1px solid Black;
+  padding: 10px 40px 10px 40px;
+  margin: 50px 0;
+  font-weight: 600;
+  /* 500がデフォルト */
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn.slide-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn.slide-bg::before {
+  /* 要素の先頭に入る空のspanとして扱われる */
+  content: '';
+  /* 擬似要素を作る際に必ず必要 */
+  width: 100%;
+  height: 100%;
+  background-color: Black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0.22, 0.01, 0.84);
+  transition: -webkit-transform 0.3s cubic-bezier(1, 0.22, 0.01, 0.84);
+  transition: transform 0.3s cubic-bezier(1, 0.22, 0.01, 0.84);
+  transition: transform 0.3s cubic-bezier(1, 0.22, 0.01, 0.84), -webkit-transform 0.3s cubic-bezier(1, 0.22, 0.01, 0.84);
+  z-index: -1;
+}
+
+.btn.slide-bg:hover {
+  color: white;
+}
+
+.btn.slide-bg:hover::before {
+  /* NEW */
+  -webkit-transform: none;
+          transform: none;
+}
+/*# sourceMappingURL=style.css.map */

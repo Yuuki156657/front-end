@@ -1,0 +1,17 @@
+
+.parent {
+    font-weight: 50;
+    color: red;
+}
+
+span {
+    background-color:gray;    /* プロパティ：値 */
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    color: green;
+}
+
+.parent span {
+    color: orange;
+}
