@@ -1,24 +1,30 @@
 $Black: black;
 
+#container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
 
-// -------- ローダー -----------------------
+    & > div {
+        flex-basis: 100px;
+    }
+}
+
+// -------- ローダー① -----------------------
 .three-dot {
     text-align: center;
     & div {
         display: inline-block;
         width: 18px;
         height: 18px;
+        margin: 100% auto;
         background-color: $Black;
         border-radius: 50%;
-        
         animation: bouncedelay 1s infinite;
-
     }
-
     & .bounce1 {
         animation-delay: -0.32s;
     }
-
     & .bounce2 {
         animation-delay: -0.16s;
     }
@@ -38,4 +44,118 @@ $Black: black;
         transform: scale(0);
     }
     
+}
+
+// -------- ローダー② -----------------------
+.spinner {
+    .squer {
+        width: 40px;
+        height: 40px;
+        background-color: $Black;
+        margin: 100px auto;
+        animation: rotateplane;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    }
+}
+
+// -------- ローダー③ -----------------------
+.double-spinner {
+    .round {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        margin: 100px auto;
+        & > div {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: $Black;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: bounce2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            
+            &:nth-child(2) {
+                animation-delay: -1s;
+            }
+        }
+    }
+}
+@keyframes bounce2 {
+    0%,100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+// -------- ローダー④ -----------------------
+.rect-spinner {
+    .rect {
+        width: 60px;
+        height: 40px;
+        position: relative;
+        margin: 100px auto;
+
+        text-align: center;
+        letter-spacing: -2px;
+
+        & > div {
+            width: 10%;
+            height: 100%;
+            background-color: $Black;
+            top: 0;
+            left: 0;
+            animation: rect;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+
+            display: inline-block;
+
+            &:nth-child(2) {
+                animation-delay: 0.1s;
+            }
+            &:nth-child(3) {
+                animation-delay: 0.2s;
+            }
+            &:nth-child(4) {
+                animation-delay: 0.3s;
+            }
+            &:nth-child(5) {
+                animation-delay: 0.4s;
+            }
+            
+        }
+    }
+}
+@keyframes rect {
+    0% {
+        transform: scaleY(0.4)
+    }
+    20% {
+        transform: scaleY(1)
+    }
+    40%, 100% {
+        transform: scaleY(0.4)
+    }
 }
